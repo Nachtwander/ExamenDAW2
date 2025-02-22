@@ -1,7 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require('../db/Connection');
 
-
 const Usuarios = sequelize.define("Usuario", {
   id: {
     type: DataTypes.INTEGER,
@@ -10,11 +9,15 @@ const Usuarios = sequelize.define("Usuario", {
   },
   nombre: {
     type: DataTypes.STRING(150),
-    allowNull: true,
+    allowNull: false,
   },
   contraseña: {
-    type: DataTypes.STRING(50),
+    type: DataTypes.STRING(150),
     allowNull: true,
+  },
+  administrador: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
   },
 }, {
   tableName: "usuarios",

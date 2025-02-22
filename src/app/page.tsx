@@ -32,7 +32,7 @@ export default function Login() {
         <h3 className="text-center">Login</h3>
         <form onSubmit={manejarSubmit}>
           <div className="mb-3">
-            <label className="form-label">Nombre</label>
+            <label className="form-label">Usuario</label>
             <input
               type="text"
               className="form-control"
